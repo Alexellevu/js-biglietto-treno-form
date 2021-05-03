@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    margin: auto;
+    text-align: center;
+}
+.color1{
+    background-color: #B91450;
+}
+
+.input_utente{
+    width: 80%;
+    background-color: white;
+    border-radius: 15px;
+    color: #B91450;
+    margin: auto;
+}
+
+.pulsanti{
+    
+}
