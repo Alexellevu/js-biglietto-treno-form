@@ -20,6 +20,14 @@
     margin: auto;
 }
 
+.stampa_ticket{
+    width: 80%;
+    background-color: white;
+    color:black;
+    text-align: left;
+    margin: auto;
+}
+
 .pulsanti{
     
 }
