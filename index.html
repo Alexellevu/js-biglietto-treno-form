@@ -8,7 +8,7 @@
     <title>Biglietto_treno_plus</title>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
-<body>
+<body> 
     <header>
         <div class="container color1 text-white">
             <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
@@ -16,20 +16,21 @@
                
                 <div class=" text-center">
                     
-                    <input id="nome_cognome" type="text" value="">
-                    <input id="distanza" type="text">
+                    <input id="nome" type="text" placeholder="Nome e cognome">
+                    <input id="km" type="number" placeholder="km da percorrere">
                     <select name="età" id="">
                         <option value=""></option>
-                        <option value="">Minorenne</option>
-                        <option value="">Anziano</option>
-                        <option value="">Altro</option>
+                        <option value="minorenne">Minorenne</option>
+                        <option value="maggiorene">Maggiorene</option>
+                        <option value="over65">Over65</option>
+                        
                         
                     </select>
                 </div>
             
                  <div class="pulsanti">
-                    <button id="salva" >Genera</button>
-                    <button>Annulla</button>
+                    <button id="genera_ticket" >Genera</button>
+                    <button id="cancella">Annulla</button>
             
                 </div>
                 
