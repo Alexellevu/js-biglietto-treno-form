@@ -10,7 +10,7 @@ document.getElementById('genera_ticket_click').addEventListener('click',generaTi
     var gruppiEtà = document.getElementById('anni');
     
     var prezzoPieno = kmEl.value * 0.21;
-    var bigliettoEL = document.querySelector('.biglietto');
+    var bigliettoEL = document.querySelector('.stampa_biglietto');
    
 
 
@@ -31,31 +31,33 @@ document.getElementById('genera_ticket_click').addEventListener('click',generaTi
 
     bigliettoEL.insertAdjacentHTML('beforeend',
     `
-        <div class="passeggero">
-            <h5>Nome passeggero</h5>  
-            ${nomeEl.value}
-        </div>
+    <div class="passeggero">
+        <div class="nome_passeggero">
+            <h5>Nome <br> passeggero</h5>  
+            <span>${nomeEl.value}</span>
+        </div>    
+        
 
-        <div class="offerta">
+        <div class="card">
             <h5>Offerta</h5>
             <span>Sconto ${gruppiEtà.value}</span>
         </div>
 
-        <div class="carrozza">
+        <div class="card">
             <h5>Carrozza</h5>
-        ${randomNumber(0,10)}
+        <span>${randomNumber(0,10)}</span>
         </div>
 
-        <div class="codiceCP">
+        <div class="card">
             <h5>CodiceCP</h5>
-            ${randomNumber(90000,100000)}           
+               <span> ${randomNumber(90000,100000)} </span>  
         </div>
 
-        <div class="codiceCP">
+        <div class="card">
             <h5>Costo Biglietto</h5>
-            ${prezzoPieno}  <span>€</span>       
+              <span>${prezzoPieno}€</span>       
         </div>
-
+    </div>
         
     `
 
@@ -65,6 +67,7 @@ document.getElementById('genera_ticket_click').addEventListener('click',generaTi
 
 }
 
+//funzione che annulla i dati inseriti
 document.getElementById('cancella').addEventListener('click',annullaBiglietto);
 
     function annullaBiglietto(){

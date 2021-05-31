@@ -7,6 +7,8 @@
 .container{
     margin: auto;
     text-align: center;
+    background-color: #B91450;
+    height: 100vh;
 }
 .color1{
     background-color: #B91450;
@@ -20,29 +22,74 @@
     margin: auto;
 }
 
+.campi_testo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.casella{
+    display: flex;
+    flex-direction: column;
+}
+
+.pulsanti button{
+    margin: 20px;
+    width: 100px;
+    height: 50px;
+}
+
 .stampa_biglietto{
     width: 80%;
     background-color: white;
     color:black;
     margin: auto;
     padding: 5px;
+  
+    
 }
 
 .stampa_biglietto h3{
     text-align: left;
 }
 
-.biglietto{
+.passeggero{
+    
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 100%;
+    align-items: flex-start;
+
+    text-align: left;
     border: 1px solid grey;
+    margin: 5px;
     
+}
+.nome_passeggero{
 
+    background-color: grey;
+    width: 30%;
+    height: 7rem;
 }
 
-.passeggero{
-    background-color:grey;
+.nome_passeggero h5{
+    font-weight: 400px;
+    text-transform: uppercase;
 }
+
+.nome_passeggero span{
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+
+.card {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 7rem;
+}
+
 
