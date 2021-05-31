@@ -31,6 +31,7 @@ document.getElementById('genera_ticket_click').addEventListener('click',generaTi
 
     bigliettoEL.insertAdjacentHTML('beforeend',
     `
+    <h3>DETTAGLIO PASSEGGERI</h3>
     <div class="passeggero">
         <div class="nome_passeggero">
             <h5>Nome <br> passeggero</h5>  
@@ -45,7 +46,7 @@ document.getElementById('genera_ticket_click').addEventListener('click',generaTi
 
         <div class="card">
             <h5>Carrozza</h5>
-        <span>${randomNumber(0,10)}</span>
+        <span>${randomNumber(1,10)}</span>
         </div>
 
         <div class="card">
@@ -55,7 +56,7 @@ document.getElementById('genera_ticket_click').addEventListener('click',generaTi
 
         <div class="card">
             <h5>Costo Biglietto</h5>
-              <span>${prezzoPieno}€</span>       
+              <span>${prezzoPieno.toFixed(2)}€</span>       
         </div>
     </div>
         
