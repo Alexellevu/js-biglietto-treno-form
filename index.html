@@ -8,16 +8,22 @@
     <title>Biglietto_treno_plus</title>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
-<body> 
+<body>
+    <div class="container color1 text-white">
     <header>
-        <div class="container color1 text-white">
+       
             <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+    </header>
+
+    <main>
             <div class="input_utente ">
                
-                <div class=" text-center">
-                    
-                    <input id="nome" type="text" placeholder="Nome e cognome">
-                    <input id="km" type="number" placeholder="km da percorrere">
+                <div class=" campi_testo">
+                    <label for="">Nome e Cognome</label>
+                    <input id="nome" type="text" >
+                    <label for="">Km da percorrere</label>
+                    <input id="km" type="number">
+                    <label for="">Fascia d'età</label>
                     <select name="anni_utente" id="anni">
                         <option value=""></option>
                         <option value="minorenne">Minorenne</option>
@@ -37,21 +43,22 @@
                 
             </div>
             <h1>IL TUO BIGLIETTO</h1>
-                <div class="stampa_ticket">
+            
+                <div class="stampa_biglietto">
                     <h3>DETTAGLIO PASSEGGERI</h3>
-                    <div class="row">
+                    <div class="biglietto">
 
-                        <div class="biglietto">
-
-                        </div>
                     </div>
-                </div>
-        </div>
-    </header>
 
-    <main>
+                </div>
+
+            </main>
+        </div>
+   
+
+    
         
-    </main>
+    
     
     <script src="./assets/main.js"></script>
 </body>

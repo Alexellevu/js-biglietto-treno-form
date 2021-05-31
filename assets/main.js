@@ -4,12 +4,13 @@ document.getElementById('genera_ticket_click').addEventListener('click',generaTi
     function generaTicket(event){
     event.preventDefault();
     var nomeEl = document.getElementById('nome');
-    console.log(nomeEl);
+  
     var kmEl = document.getElementById('km');
-    console.log(kmEl);
+  
     var gruppiEtà = document.getElementById('anni');
-    console.log(gruppiEtà);
+    
     var prezzoPieno = kmEl.value * 0.21;
+    var bigliettoEL = document.querySelector('.biglietto');
    
 
 
@@ -23,7 +24,55 @@ document.getElementById('genera_ticket_click').addEventListener('click',generaTi
         prezzoPieno -= prezzoPieno * 0.4;
         
     }
-    console.log( prezzoPieno);
+
+    
+
+
+
+    bigliettoEL.insertAdjacentHTML('beforeend',
+    `
+        <div class="passeggero">
+            <h5>Nome passeggero</h5>  
+            ${nomeEl.value}
+        </div>
+
+        <div class="offerta">
+            <h5>Offerta</h5>
+            <span>Sconto ${gruppiEtà.value}</span>
+        </div>
+
+        <div class="carrozza">
+            <h5>Carrozza</h5>
+        ${randomNumber(0,10)}
+        </div>
+
+        <div class="codiceCP">
+            <h5>CodiceCP</h5>
+            ${randomNumber(90000,100000)}           
+        </div>
+
+        <div class="codiceCP">
+            <h5>Costo Biglietto</h5>
+            ${prezzoPieno}  <span>€</span>       
+        </div>
+
+        
+    `
+
+    )
+
+
+
+}
+
+document.getElementById('cancella').addEventListener('click',annullaBiglietto);
+
+    function annullaBiglietto(){
+        document.getElementById('nome').value ='';
+        document.getElementById('km').value ='';
+        document.getElementById('anni_utente').value ='';
+
+
     }
 
 
